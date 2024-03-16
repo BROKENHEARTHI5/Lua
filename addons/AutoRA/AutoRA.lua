@@ -38,9 +38,9 @@ local haltontp = function()
     settings.HaltOnTp = not settings.HaltOnTp
 
     if settings.HaltOnTp then
-        windower.add_to_chat(17, 'AutoRA will halt upon reaching 1000 TP')
+        windower.add_to_chat(17, 'AutoRA will halt upon reaching 2000 TP')
     else
-        windower.add_to_chat(17, 'AutoRA will no longer halt upon reaching 1000 TP')
+        windower.add_to_chat(17, 'AutoRA will no longer halt upon reaching 2000 TP')
     end
 end
 
@@ -54,9 +54,9 @@ local check = function()
         return
     end
 
-    if player.vitals.tp >= 1000 and settings.HaltOnTp then
+    if player.vitals.tp >= 2000 and settings.HaltOnTp then
         auto = false
-        windower.add_to_chat(17, 'AutoRA  HALTING AT 1000 TP ~~~~~~~~~~~~~~')
+        windower.add_to_chat(17, 'AutoRA  HALTING AT 2000 TP ~~~~~~~~~~~~~~')
     elseif player.status == 1 then
         shoot()
     end
